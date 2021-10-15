@@ -163,8 +163,9 @@ NumericVector model_optimizer(
 
 // @param x An R data frame containing the independent variables
 // @param y An R data frame containing the dependent variable
-// @param type A string representing the type of model to build; either regression or classification
 // @param family The (exponential family) distribution of the residuals
+// @param learning_rate The step size to take when adjusting the coefficients according to the gradient
+// @param k Print loss iterations k times
 // [[Rcpp::export]]
 NumericVector linear_model(
     DataFrame const& x, 
